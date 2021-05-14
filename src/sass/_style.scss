@@ -1,0 +1,41 @@
+:root {
+  --main-color-text: black;
+  --main-bg-color: green;
+  --accent-bg-color: greenyellow;
+
+  --transition-duration: 500ms;
+  --transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  font-size: 80px;
+  background-color: var(--main-bg-color);
+  color: var(--main-color-text);
+}
+
+.timer.visible {
+  display: none;
+}
+
+.field {
+  width: 180px;
+}
+
+span {
+  display: block;
+  text-align: center;
+  background-color: var(--accent-bg-color);
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+span.color {
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.label {
+  font-size: 40px;
+  background-color: var(--main-bg-color);
+}
